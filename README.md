@@ -20,3 +20,5 @@ Listing below the components used in current implementation
   - OpenAPI
 - Swashbuckle
   - Self documentation
+- Unit Tests
+  - MSTest
