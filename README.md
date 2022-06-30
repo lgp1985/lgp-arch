@@ -1,12 +1,12 @@
 # lgp-arch
-Sample architecture of full-stack.
+Sample __in progress__ architecture of full-stack.
 
 ## Components
 Listing below the components used in current implementation
 
 - .NET Core 6.0
   - AspNet Core
-  - Dependenci Injection
+  - Dependency Injection
 - Docker
   - Container
 - WebAPI
@@ -22,3 +22,4 @@ Listing below the components used in current implementation
   - Self documentation
 - Unit Tests
   - MSTest
+  - Mock

@@ -1,7 +1,7 @@
 namespace TestSampleApi;
 
 [TestClass]
-public class UnitTest1
+public class WeatherForecastControllerUnitTests
 {
     [TestMethod]
     public void TestMethod1()
