@@ -22,25 +22,18 @@ builder.Services.AddSwaggerGen(options =>
             Implicit = new OpenApiOAuthFlow
             {
                 AuthorizationUrl = new Uri($"https://login.microsoftonline.com/{builder.Configuration["AzureAD:TenantId"]}/oauth2/authorize"),
-                Scopes = { { builder.Configuration.GetSection("AzureAd")["Scopes"], "" } }
+                Scopes = { { builder.Configuration.GetSection("AzureAd")["Scopes"], "Access the API on your behalf" } }
             }
         },
         In = ParameterLocation.Header,
         Scheme = JwtBearerDefaults.AuthenticationScheme,
     });
-    options.AddSecurityRequirement(new OpenApiSecurityRequirement
-{
-    {
-        new OpenApiSecurityScheme
-        {
-            Reference = new OpenApiReference
-            {
-                Type = ReferenceType.SecurityScheme,
-                Id = JwtBearerDefaults.AuthenticationScheme
-            }
-        },Array.Empty<string>()
-    }
-});
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement {
+        { new OpenApiSecurityScheme { Reference = new OpenApiReference {
+            Type = ReferenceType.SecurityScheme,
+            Id = JwtBearerDefaults.AuthenticationScheme } }, Array.Empty<string>() 
+        }
+    });
 });
 
 var app = builder.Build();
