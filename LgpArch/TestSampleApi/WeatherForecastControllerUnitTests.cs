@@ -4,7 +4,7 @@ namespace TestSampleApi;
 public class WeatherForecastControllerUnitTests
 {
     [TestMethod]
-    public void TestMethod1()
+    public void IsResponseWith5Results()
     {
         // Arrange
         var weatherForecast = new WeatherForecastController(new NullLogger<WeatherForecastController>());
