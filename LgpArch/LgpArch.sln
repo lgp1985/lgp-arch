@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LgpSampleApi", "LgpSampleApi\LgpSampleApi.csproj", "{896CCFDD-C3B0-4688-8502-160CDECD30A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSampleApi", "TestSampleApi\TestSampleApi.csproj", "{614D9498-7C3D-4821-8377-76C795953E23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSampleApi", "TestSampleApi\TestSampleApi.csproj", "{614D9498-7C3D-4821-8377-76C795953E23}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "LgpSampleFrontEnd", "LgpSampleFrontEnd\LgpSampleFrontEnd.esproj", "{AFDCAD9A-E244-4D1B-86F5-32BD13368035}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,12 @@ Global
 		{614D9498-7C3D-4821-8377-76C795953E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{614D9498-7C3D-4821-8377-76C795953E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{614D9498-7C3D-4821-8377-76C795953E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFDCAD9A-E244-4D1B-86F5-32BD13368035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDCAD9A-E244-4D1B-86F5-32BD13368035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDCAD9A-E244-4D1B-86F5-32BD13368035}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AFDCAD9A-E244-4D1B-86F5-32BD13368035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDCAD9A-E244-4D1B-86F5-32BD13368035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFDCAD9A-E244-4D1B-86F5-32BD13368035}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
