@@ -18,5 +18,5 @@ public interface IWeatherRepository
     /// Saves the provided weather into the database.
     /// </summary>
     /// <param name="weather">Current weather</param>
-    public ValueTask<EntityEntry<IWeather>> SetWeatherAsync(IWeather weather);
+    public Task<IWeather> SetWeatherAsync(IWeather weather);
 }

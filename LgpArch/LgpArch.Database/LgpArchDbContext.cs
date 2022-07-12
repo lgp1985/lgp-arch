@@ -2,5 +2,11 @@
 
 public class LgpArchDbContext : DbContext
 {
-    public DbSet<IWeather> Weathers { get; set; }
+    public LgpArchDbContext() : base()
+    {
+    }
+    public LgpArchDbContext(DbContextOptions<LgpArchDbContext> options) : base(options)
+    {
+    }
+    public DbSet<BusinessObjects.Weather> Weathers { get; set; }
 }
