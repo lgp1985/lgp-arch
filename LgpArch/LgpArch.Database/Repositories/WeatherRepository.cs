@@ -29,10 +29,10 @@ public class WeatherRepository : IWeatherRepository
             .ToListAsync();
     }
 
-    public async Task<IWeather> SetWeatherAsync(IWeather weather) => (await DbContext.Weathers.AddAsync(new BusinessObjects.Weather(
-    
-        Date: weather.Date,
-        TemperatureC: weather.TemperatureC,
-        Summary: weather.Summary
-    ))).Entity;
+    public async Task<IWeather> SetWeatherAsync(IWeather weather) => (await DbContext.Weathers.AddAsync(new BusinessObjects.Weather
+    {
+        Date = weather.Date,
+        TemperatureC = weather.TemperatureC,
+        Summary = weather.Summary
+    })).Entity;
 }
