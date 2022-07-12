@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  lgpsampleapi:
+    image: ${DOCKER_REGISTRY-}lgpsampleapi
+    build:
+      context: .
+      dockerfile: LgpSampleApi/Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+
+  sqldata:
+    container_name: sqldata
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "S1mpleP@ss"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata-mssql:/var/opt/mssql
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "$$SA_PASSWORD" -Q "SELECT 1" || exit 1
+      interval: 3s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  sqldata-mssql:
+    external: false

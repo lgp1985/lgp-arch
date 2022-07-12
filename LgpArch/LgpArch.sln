@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSampleApi", "TestSample
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "LgpSampleFrontEnd", "LgpSampleFrontEnd\LgpSampleFrontEnd.esproj", "{AFDCAD9A-E244-4D1B-86F5-32BD13368035}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LgpArch.Facades", "LgpArch.Facades\LgpArch.Facades.csproj", "{7DF6A266-39D5-489E-ABA4-0EBC6D117FDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LgpArch.Facades", "LgpArch.Facades\LgpArch.Facades.csproj", "{7DF6A266-39D5-489E-ABA4-0EBC6D117FDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LgpArch.Database", "LgpArch.Database\LgpArch.Database.csproj", "{B4A472A0-E44D-42F5-9020-6EF0A8EA5B26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LgpArch.Database", "LgpArch.Database\LgpArch.Database.csproj", "{B4A472A0-E44D-42F5-9020-6EF0A8EA5B26}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E700438D-D1D0-400A-9927-44F581091DD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{B4A472A0-E44D-42F5-9020-6EF0A8EA5B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4A472A0-E44D-42F5-9020-6EF0A8EA5B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4A472A0-E44D-42F5-9020-6EF0A8EA5B26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E700438D-D1D0-400A-9927-44F581091DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E700438D-D1D0-400A-9927-44F581091DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E700438D-D1D0-400A-9927-44F581091DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E700438D-D1D0-400A-9927-44F581091DD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
