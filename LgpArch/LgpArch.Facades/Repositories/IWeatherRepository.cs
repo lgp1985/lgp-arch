@@ -1,5 +1,4 @@
 ﻿using LgpArch.Facades.BusinessObjects;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace LgpArch.Facades.Repositories;
 
