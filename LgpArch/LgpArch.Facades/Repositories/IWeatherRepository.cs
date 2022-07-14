@@ -18,4 +18,11 @@ public interface IWeatherRepository
     /// </summary>
     /// <param name="weather">Current weather</param>
     public Task<IWeather> SetWeatherAsync(IWeather weather);
+
+
+    /// <summary>
+    /// Saves the provided enumeration of weathers into the database.
+    /// </summary>
+    /// <param name="weather">Current weathers</param>
+    public Task<IEnumerable<IWeather>> SetWeatherAsync(IEnumerable<IWeather> weathers);
 }

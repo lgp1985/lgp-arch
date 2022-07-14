@@ -1,6 +1,8 @@
+using LgpArch.Facades.BusinessObjects;
+
 namespace LgpSampleApi;
 
-public class WeatherForecast
+public class WeatherForecast: IWeather
 {
     public DateTime Date { get; set; }
 

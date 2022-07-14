@@ -23,10 +23,27 @@ public class WeatherRepository : IWeatherRepository
             .ToListAsync();
     }
 
-    public async Task<IWeather> SetWeatherAsync(IWeather weather) => (await DbContext.Weathers.AddAsync(new BusinessObjects.Weather
+    public async Task<IWeather> SetWeatherAsync(IWeather weather)
     {
-        Date = weather.Date,
-        TemperatureC = weather.TemperatureC,
-        Summary = weather.Summary
-    })).Entity;
+        var response = DbContext.Weathers.Add(new BusinessObjects.Weather
+        {
+            Date = weather.Date,
+            TemperatureC = weather.TemperatureC,
+            Summary = weather.Summary
+        }).Entity;
+        await DbContext.SaveChangesAsync();
+        return response;
+    }
+    public async Task<IEnumerable<IWeather>> SetWeatherAsync(IEnumerable<IWeather> weathers)
+    {
+        var list = weathers.Select(weather => new BusinessObjects.Weather
+        {
+            Date = weather.Date,
+            TemperatureC = weather.TemperatureC,
+            Summary = weather.Summary
+        });
+        DbContext.Weathers.AddRange(list);
+        await DbContext.SaveChangesAsync();
+        return list.AsEnumerable<IWeather>();
+    }
 }
